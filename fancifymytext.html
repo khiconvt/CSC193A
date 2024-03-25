@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancify Shamcify</title>
+		<!-- link to your script file here -->
+		<!-- 
+			defer: instruct the browser to defer the execution of the script until after the document has been parsed
+			it will be executed after the document parsing is complete, but before the DOMContentLoaded event fires
+			to ensure that scripts do not delay the loading and rendering of the page initial content => better performance
+		-->
+		<script src="fancifymytext.js" defer></script>
+		
+	</head>
+
+	<body>
+		<h1>Fancify my Text</h1>
+		<!-- Your UI controls go here -->
+		<fieldset>
+			<legend>Text</legend>
+			<textarea id="inputText" rows="4" cols="30"></textarea>
+		</fieldset>
+
+		<fieldset>
+			<legend>Fancify</legend>
+			<button onclick="increaseTextSize()">Bigger!</button>
+			<br>
+			<input type="radio" id="fancyShmancy" name="fancyType" value="fancy" onchange="changeStyle()">
+			<label for="fancyShmacy">FancyShmancy</label>
+			<br>
+			<input type="radio" id="boringBetty" name="fancyType" value="boring" onchange="changeStyle()">
+			<label for="boringBetty">BoringBetty</label>
+			<br>
+		</fieldset>
+
+		<button onclick="upperCase()">Moo</button>
+		
+	</body>
+</html>
